@@ -56,7 +56,7 @@
 		<div id="menu">
 			<a class="active" href="index.html">Home</a>
 			<a href="docs.html">Docs</a>
-			<a href="dashboard.html">Dashboard</a>
+			<a data-fancybox data-src="#login" href="javascript:;" class="login-btn">Login</a>
 		</div>
 	</div>
 	<a href="javascript:void(0);" class="menu icon">
@@ -66,6 +66,10 @@
 		            <stop stop-color="#6673B4" offset="0%"></stop>
 		            <stop stop-color="#9EAEFF" offset="100%"></stop>
 		        </linearGradient>
+				<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="pink">
+					<stop stop-color="#feb4b4" offset="0%"></stop>
+					<stop stop-color="#ff729a" offset="100%"></stop>
+				</linearGradient>
 		    </defs>
 		    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
@@ -74,9 +78,15 @@
 		                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
 		                <rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
 		            </g>
+					<g id="Group-4" transform="translate(25.000000, 15.000000)">
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="13" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="6.5" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="0" width="15" height="2"></rect>
+					</g>
 		        </g>
 		    </g>
 		</svg>
+
 	</a>
 	<!-- End menu -->
 	<div id="fullpage">
@@ -433,38 +443,27 @@
 				DEMO
 			</div>
 			<img class="full-image" src="img/e1-res-fd.jpg" alt="image">
-			<pre class="code">
-				<a href="#">See documentation</a>
-				<code>
-<span class="grey">#example code</span>
+			<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)
-				</code>
-			</pre>
+</code></pre>
 			<a class="see_docs" href="#">See documentation</a>
-			<pre class="code">
-				<a class="file" href="files/e1-fd.json" download>
-					<img src="img/json.svg" alt="">
-				</a>
-				<code>
-[
+			<pre class="code"><a class="file" href="files/e1-fd.json" download><img src="img/json.svg" alt=""></a><code>[
   {
-    <span class="violet">"h"</span>: <span class="green">278</span>, 
-    <span class="violet">"score"</span>: <span class="violet">"0.91907316"</span>, 
-    <span class="violet">"w"</span>: <span class="green">281</span>, 
-    <span class="violet">"y"</span>: <span class="green">183</span>, 
+    <span class="violet">"h"</span>: <span class="green">278</span>,
+    <span class="violet">"score"</span>: <span class="violet">"0.91907316"</span>,
+    <span class="violet">"w"</span>: <span class="green">281</span>,
+    <span class="violet">"y"</span>: <span class="green">183</span>,
     <span class="violet">"x"</span>: <span class="green">132</span>
-  }, 
+  },
   {
-    <span class="violet">"h"</span>: <span class="green">321</span>, 
-    <span class="violet">"score"</span>: <span class="violet">"0.89893955"</span>, 
-    <span class="violet">"w"</span>: <span class="green">301</span>, 
-    <span class="violet">"y"</span>: <span class="green">175</span>, 
+    <span class="violet">"h"</span>: <span class="green">321</span>,
+    <span class="violet">"score"</span>: <span class="violet">"0.89893955"</span>,
+    <span class="violet">"w"</span>: <span class="green">301</span>,
+    <span class="violet">"y"</span>: <span class="green">175</span>,
     <span class="violet">"x"</span>: <span class="green">531</span>
   }
-]
-				</code>
-			</pre>
+]</code></pre>
 		</div>
 		<div class="fd2 d-none">
 			<a href="javascript:;" class="back">
@@ -477,19 +476,13 @@ result, status, error_message = face_detector.on_image(image)
 			</div>
 			<img class="full-image" src="img/e2-res-fd.jpg" alt="image">
 			<pre class="code">
-				<a href="#">See documentation</a>
-				<code>
+<a href="#">See documentation</a><code>
 <span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)
-				</code>
-			</pre>
-			<a class="see_docs" href="#">See documentation</a>
-			<pre class="code">
-				<a class="file" href="files/e2-fd.json" download>
-					<img src="img/json.svg" alt="">
-				</a>
-				<code>
+</code></pre>
+<a class="see_docs" href="#">See documentation</a>
+<pre class="code"><a class="file" href="files/e2-fd.json" download><img src="img/json.svg" alt=""></a><code>
 [
   {
     <span class="violet">"h"</span>: <span class="green">278</span>, 
@@ -505,9 +498,7 @@ result, status, error_message = face_detector.on_image(image)
     <span class="violet">"y"</span>: <span class="green">175</span>, 
     <span class="violet">"x"</span>: <span class="green">531</span>
   }
-]
-				</code>
-			</pre>
+]</code></pre>
 		</div>
 		<div class="fd3 d-none">
 			<a href="javascript:;" class="back">
@@ -877,11 +868,35 @@ result, status, error_message = face_detector.on_image(image)
 				</pre>
 			</div>
 		</div>
+
+	<a data-fancybox data-src="#success" href="javascript:;" class="success">
+	<!-- Success window popup	-->
+	<div id="success">
+		<a class="close-btn" onclick="$.fancybox.close();" href="javascript:;">
+			<img src="img/close.svg" alt="Close">
+		</a>
+		<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+			<defs>
+				<linearGradient id="a" x1="0%" y1="100%" y2="0%">
+					<stop offset="0%" stop-color="#6673B4"/>
+					<stop offset="100%" stop-color="#9EAEFF"/>
+				</linearGradient>
+			</defs>
+			<g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+				<rect width="25" height="25" stroke="#6673B4" rx="12.5"/>
+				<path fill="url(#a)" d="M3.496 7.773a.626.626 0 0 1-.46.21.626.626 0 0 1-.458-.21L.18 5.308a.677.677 0 0 1 0-.944.64.64 0 0 1 .918 0l1.938 1.993L8.966.21a.603.603 0 0 1 .878.01.683.683 0 0 1-.01.935L3.496 7.773z" transform="translate(8 9)"/>
+			</g>
+		</svg>
+		<h4>
+			Verification email sent
+		</h4>
+	</div>
 	<!-- Resources -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.extensions.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/scroll.js"></script>
 	<script src="js/home.js"></script>
 </body>
 </html>
