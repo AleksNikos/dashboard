@@ -116,7 +116,7 @@
 									</li>
 								</ul>
 								<div class="nav_more">
-									<a href="#"></a>
+									<a class="btn-change-long-page" href="javascript:;"></a>
 								</div>
 							</nav>
 							<nav class="mobile-nav">
@@ -294,11 +294,10 @@
 								</tr>
 							</table>	
 							<div class="nav_more" id="mobile-dashboard-detail">
-								<a href="#">
+								<a href="javascript:;">
 									<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M5.93782 6.70937C5.97927 6.74896 6 6.80833 6 6.8875C6 6.96667 5.97927 7.02604 5.93782 7.06563C4.13471 8.62918 3.2228 9.42083 3.20207 9.44063C3.16062 9.48021 3.09845 9.5 3.01554 9.5C2.93264 9.5 2.87047 9.48021 2.82902 9.44063L0.0932647 7.06563C-0.0310882 6.94687 -0.0310882 6.82813 0.0932647 6.70937C0.217618 6.59062 0.341969 6.59062 0.466322 6.70937L2.76684 8.69844V0.2375C2.76684 0.0791659 2.84974 0 3.01554 0C3.18135 0 3.26425 0.0791659 3.26425 0.2375V8.69844L5.56477 6.70937C5.68912 6.59062 5.81347 6.59062 5.93782 6.70937Z" fill="#D0D8FF"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.93782 6.70937C5.97927 6.74896 6 6.80833 6 6.8875C6 6.96667 5.97927 7.02604 5.93782 7.06563C4.13471 8.62918 3.2228 9.42083 3.20207 9.44063C3.16062 9.48021 3.09845 9.5 3.01554 9.5C2.93264 9.5 2.87047 9.48021 2.82902 9.44063L0.0932647 7.06563C-0.0310882 6.94687 -0.0310882 6.82813 0.0932647 6.70937C0.217618 6.59062 0.341969 6.59062 0.466322 6.70937L2.76684 8.69844V0.2375C2.76684 0.0791659 2.84974 0 3.01554 0C3.18135 0 3.26425 0.0791659 3.26425 0.2375V8.69844L5.56477 6.70937C5.68912 6.59062 5.81347 6.59062 5.93782 6.70937Z" fill="#D0D8FF"/>
 									</svg>
-
 								</a>
 							</div>		
 						</div>
@@ -313,9 +312,9 @@
 									current payment period
 								</div>
 								<canvas id="bar-chart-horizontal"  height="4"></canvas>
-								<a href="docs.html" class="menu" id="menuDesctop">
+								<a href="docs.html" class="goto_docs" id="menuDesctop">
 									<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H22V2H0V0ZM8 16H22V18H8V16ZM22 8H12V10H22V8Z" fill="#D0D8FF"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H22V2H0V0ZM8 16H22V18H8V16ZM22 8H12V10H22V8Z" fill="#D0D8FF"/>
 									</svg>
 								</a>
 							</div>
@@ -385,11 +384,21 @@
 								</svg>
 							</a>
 						</div>
-						<div class="block-wrapper mini-chart d-none">
+						<div class="block-wrapper mini-chart">
+							<div class="title">
+								Engines usage
+							</div>
+							<div class="tabs">
+								<a class="active" href="#">Month</a>
+								<a href="#" class="icon">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="30" height="30" rx="2" fill="#1E2549" fill-opacity="0.5"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L9.21113 5L16.0965 15L21.5459 11.2764L25 25H5Z" fill="#6673B4"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L10.1095 14L16.0199 19L21.0371 18.4322L25 25H5Z" fill="#9EAEFF"/>
+									</svg>
+								</a>
+							</div>
 							<div class="chart-mini">
-								<div class="title">
-									Engines usage
-								</div>
 								<canvas id="myChartMini"></canvas>
 							</div>
 						</div>
@@ -407,9 +416,9 @@
 								Engines usage
 							</h3>
 							<div class="tabs">
-								<a class="active" href="#">Month</a>
-								<a class="" href="#">Year</a>
-								<a class="" href="#">Ever</a>
+								<a class="active" data-period="month" onclick="period(event, 'month')" href="#">Month</a>
+								<a class="" data-period="year" onclick="period(event, 'year')" href="#">Year</a>
+								<a class="" data-period="ever" onclick="period(event, 'ever')" href="#">Ever</a>
 								<a href="#" class="icon">
 									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="30" height="30" rx="2" fill="#1E2549" fill-opacity="0.5"/>
