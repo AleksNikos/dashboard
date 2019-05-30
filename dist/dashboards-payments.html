@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="css/responsive-tables.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/new-media.css">
 </head>
 <body>
 	<section>
@@ -43,6 +43,10 @@
 											<stop stop-color="#6673B4" offset="0%"></stop>
 											<stop stop-color="#9EAEFF" offset="100%"></stop>
 										</linearGradient>
+										<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="pink">
+											<stop stop-color="#feb4b4" offset="0%"></stop>
+											<stop stop-color="#ff729a" offset="100%"></stop>
+										</linearGradient>
 									</defs>
 									<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 										<g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
@@ -50,6 +54,11 @@
 												<rect id="Rectangle" fill="#D0D8FF" x="0" y="13" width="15" height="2"></rect>
 												<rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
 												<rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
+											</g>
+											<g id="Group-4" transform="translate(25.000000, 15.000000)">
+												<rect id="Rectangle" fill="url(#pink)" x="0" y="13" width="15" height="2"></rect>
+												<rect id="Rectangle" fill="url(#pink)" x="0" y="6.5" width="15" height="2"></rect>
+												<rect id="Rectangle" fill="url(#pink)" x="0" y="0" width="15" height="2"></rect>
 											</g>
 										</g>
 									</g>
@@ -214,9 +223,9 @@
 									</a>
 								</div>
 								<div class="tabs">
-									<button class="tablinks active" onclick="year(event, '2019')" id="OpenTab">2019</button>
-									<button class="tablinks" onclick="year(event, '2018')">2018</button>
-									<button class="tablinks" onclick="year(event, '2017')">2017</button>
+									<button class="tablinks active" onclick="thisYear(event, '2019')" id="OpenTab">2019</button>
+									<button class="tablinks" onclick="thisYear(event, '2018')">2018</button>
+									<button class="tablinks" onclick="thisYear(event, '2017')">2017</button>
 								</div>
 								<div class="card">By: Card **3385
 									<a data-fancybox data-src="#edit-paymant" href="javascript:;">
@@ -659,7 +668,7 @@
 						<img src="img/ion-card - Ionicons.svg" alt="">
 					</span>
 					<span class="name">Card</span>
-					<input id="edit-card" class="hidden" type="radio" value="card" name="edit-pay-method">
+					<input id="edit-card" class="hidden" type="radio" value="card" name="edit-pay-method" checked="checked">
 					<span class="checkmark"></span>
 				</label>
 				<label for="edit-paypal" class="paypal">
@@ -667,8 +676,9 @@
 						<img src="img/Paypal-icon.svg" alt="">
 					</span>
 					<span class="name">Paypal</span>
-					<input id="edit-paypal" class="hidden" type="radio" value="paypal" name="edit-pay-method">
+					<input id="edit-paypal" class="hidden" type="radio" value="paypal" name="edit-pay-method" disabled="disabled">
 					<span class="checkmark"></span>
+					<span class="soon">Coming soon</span>
 				</label>
 			</div>
 			<div class="or">
@@ -709,7 +719,7 @@
 						<img src="img/ion-card - Ionicons.svg" alt="">
 					</span>
 					<span class="name">Card</span>
-					<input id="add-card" class="hidden" type="radio" value="card" name="add-pay-method">
+					<input id="add-card" class="hidden" type="radio" value="card" name="add-pay-method" checked="checked">
 					<span class="checkmark"></span>
 				</label>
 				<label for="add-paypal" class="paypal">
@@ -717,8 +727,9 @@
 						<img src="img/Paypal-icon.svg" alt="">
 					</span>
 					<span class="name">Paypal</span>
-					<input id="add-paypal" class="hidden" type="radio" value="paypal" name="add-pay-method">
+					<input id="add-paypal" class="hidden" type="radio" value="paypal" name="add-pay-method" disabled="disabled">
 					<span class="checkmark"></span>
+					<span class="soon">Coming soon</span>
 				</label>
 			</div>
 			<div class="card-detail">

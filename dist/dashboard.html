@@ -3,16 +3,22 @@
 <head>
 	<!-- Meta -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--	<meta name="mobile-web-app-capable" content="yes">-->
+<!--	<meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--	<meta name="application-name" content="landscape">-->
+<!--	<meta name="apple-mobile-web-app-title" content="landscape">-->
+<!--	<meta name="msapplication-starturl" content="/">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title -->
 	<title>Dashboard</title>
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 	<!-- Styles -->
+<!--	<link rel="manifest" href="files/manifest.json" />-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="css/responsive-tables.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/responsive-tables.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/new-media.css" />
 </head>
 <body>
 	<section>
@@ -21,7 +27,7 @@
 			<div id="menu">
 				<a href="#news">Home</a>
 				<a href="#contact">Docs</a>
-				<a class="active" href="#about">Dashboard</a>
+				<a href="#about" class="active">Dashboard</a>
 			</div>
 		</div>
 		<!-- End menu -->
@@ -324,7 +330,7 @@
 								<div class="chart-container">
 									<div class="val">1847</div>
 									<div class="desc">times used</div>
-								    <canvas id="doughnut-chartcanvas-1"></canvas>
+								    <canvas id="doughnut-chartcanvas-1" width="150" height="150"></canvas>
 								</div>
 								<div class="review">
 									<div class="fd">
@@ -389,12 +395,21 @@
 								Engines usage
 							</div>
 							<div class="tabs">
-								<a class="active" href="#">Month</a>
-								<a href="#" class="icon">
-									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect width="30" height="30" rx="2" fill="#1E2549" fill-opacity="0.5"/>
+								<a class="active" data-time="month" href="javascript:void(0)">Month</a>
+								<a href="javascript:void(0)" class="icon" data-fill="false">
+									<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L9.21113 5L16.0965 15L21.5459 11.2764L25 25H5Z" fill="#6673B4"/>
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L10.1095 14L16.0199 19L21.0371 18.4322L25 25H5Z" fill="#9EAEFF"/>
+									</svg>
+									<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<g id="ic-plot-line" transform="translate(-5.000000, -5.000000)">
+												<g id="Group" transform="translate(5.000000, 5.000000)">
+													<path d="M0.976291303,19.5 L19.3215418,19.5 L16.4145969,10.1220233 L11.3004224,17.4207218 L5.26629598,13.5434818 L0.976291303,19.5 Z" id="Path-2" stroke="#6673B4"></path>
+													<path d="M0.648778402,19.5 L19.0833129,19.5 L15.8651458,14.5025821 L10.736998,12.6185306 L5.40488815,1.44605567 L0.648778402,19.5 Z" id="Path" stroke="#9EAEFF"></path>
+												</g>
+											</g>
+										</g>
 									</svg>
 								</a>
 							</div>
@@ -412,21 +427,37 @@
 				<div class="row">
 					<div class="block-wrapper">
 						<div class="charts">
-							<h3 class="title">
-								Engines usage
-							</h3>
-							<div class="tabs">
-								<a class="active" data-period="month" onclick="period(event, 'month')" href="#">Month</a>
-								<a class="" data-period="year" onclick="period(event, 'year')" href="#">Year</a>
-								<a class="" data-period="ever" onclick="period(event, 'ever')" href="#">Ever</a>
-								<a href="#" class="icon">
-									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect width="30" height="30" rx="2" fill="#1E2549" fill-opacity="0.5"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L9.21113 5L16.0965 15L21.5459 11.2764L25 25H5Z" fill="#6673B4"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L10.1095 14L16.0199 19L21.0371 18.4322L25 25H5Z" fill="#9EAEFF"/>
-									</svg>
-								</a>
+							<div class="title-row">
+								<h3 class="title">
+									Engines usage
+								</h3>
+								<div class="right">
+									<div class="tabs">
+										<a data-time="month" class="active" href="javascript:void(0)">Month</a>
+										<a data-time="year" class="" href="javascript:void(0)">Year</a>
+										<a data-time="ever" class="" href="javascript:void(0)">Ever</a>
+									</div>
+									<div class="icon-btn">
+										<a href="javascript:void(0)" class="icon" data-fill="false">
+											<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L9.21113 5L16.0965 15L21.5459 11.2764L25 25H5Z" fill="#6673B4"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L10.1095 14L16.0199 19L21.0371 18.4322L25 25H5Z" fill="#9EAEFF"/>
+											</svg>
+											<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+												<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g id="ic-plot-line" transform="translate(-5.000000, -5.000000)">
+														<g id="Group" transform="translate(5.000000, 5.000000)">
+															<path d="M0.976291303,19.5 L19.3215418,19.5 L16.4145969,10.1220233 L11.3004224,17.4207218 L5.26629598,13.5434818 L0.976291303,19.5 Z" id="Path-2" stroke="#6673B4"></path>
+															<path d="M0.648778402,19.5 L19.0833129,19.5 L15.8651458,14.5025821 L10.736998,12.6185306 L5.40488815,1.44605567 L0.648778402,19.5 Z" id="Path" stroke="#9EAEFF"></path>
+														</g>
+													</g>
+												</g>
+											</svg>
+										</a>
+									</div>
+								</div>
 							</div>
+                            <div class="result"></div>
 							<div class="canvas-container">
 								<canvas id="myChart"></canvas>
 							</div>
@@ -457,25 +488,28 @@
 			Engine usage
 		</div>
 		<ul class="tabs-chart">
-			<li><a href="#">Month</a></li>
-			<li class="active"><a href="#">Year</a></li>
-			<li><a href="#">Ever</a></li>
-			<li class="graph">
-				<a href="#">
-					<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					    <desc>Created with sketchtool.</desc>
-					    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					        <g id="ic-plot-line" transform="translate(-5.000000, -5.000000)">
-					            <g id="Group" transform="translate(5.000000, 5.000000)">
-					                <path d="M0.976291303,19.5 L19.3215418,19.5 L16.4145969,10.1220233 L11.3004224,17.4207218 L5.26629598,13.5434818 L0.976291303,19.5 Z" id="Path-2" stroke="#6673B4"></path>
-					                <path d="M0.648778402,19.5 L19.0833129,19.5 L15.8651458,14.5025821 L10.736998,12.6185306 L5.40488815,1.44605567 L0.648778402,19.5 Z" id="Path" stroke="#9EAEFF"></path>
-					            </g>
-					        </g>
-					    </g>
-					</svg>
-				</a>
-			</li>
+			<li class="active"><a href="javascript:void(0)" data-time="month">Month</a></li>
+			<li><a data-time="year" href="javascript:void(0)">Year</a></li>
+			<li><a href="javascript:void(0)" data-time="ever">Ever</a></li>
 		</ul>
+		<div class="icon-btn">
+			<a href="javascript:void(0)" class="icon" data-fill="false">
+				<svg width="30px" height="30px" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L9.21113 5L16.0965 15L21.5459 11.2764L25 25H5Z" fill="#6673B4"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5 25L10.1095 14L16.0199 19L21.0371 18.4322L25 25H5Z" fill="#9EAEFF"/>
+				</svg>
+				<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g id="ic-plot-line" transform="translate(-5.000000, -5.000000)">
+							<g id="Group" transform="translate(5.000000, 5.000000)">
+								<path d="M0.976291303,19.5 L19.3215418,19.5 L16.4145969,10.1220233 L11.3004224,17.4207218 L5.26629598,13.5434818 L0.976291303,19.5 Z" id="Path-2" stroke="#6673B4"></path>
+								<path d="M0.648778402,19.5 L19.0833129,19.5 L15.8651458,14.5025821 L10.736998,12.6185306 L5.40488815,1.44605567 L0.648778402,19.5 Z" id="Path" stroke="#9EAEFF"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+			</a>
+		</div>
 		<div class="graph-mobile">
 			<canvas id="graph-mobile"></canvas>
 		</div>
@@ -537,7 +571,7 @@
 	<!-- Resources -->
 	<script src="https://code.jquery.com/jquery-1.x-git.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<script src="js/responsive-tables.js"></script>
 	<script src="js/chartjs-plugin-stacked100.js"></script>
 	<script src="js/main.js"></script>
