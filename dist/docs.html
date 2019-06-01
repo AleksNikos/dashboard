@@ -78,7 +78,7 @@
 		</svg>
 	</a>
 	<!-- End menu -->
-	<section id="docs" class="docs" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+	<section id="docs" class="docs">
 		<div class="wrapper">
 			<div class="row">
 				<nav class="vertical-nav">
@@ -110,7 +110,7 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="content-docs" data-spy="scroll" data-target=".vertical-nav">
+				<div class="content-docs">
 					<div id="api_client" class="link">
 						<h1 class="title">
 							API client
@@ -119,6 +119,7 @@
 							Our system works with the <span>gRPC service</span> developed by Google. It allows data transferring to the server quickly and safely, with no need to worry if someone intercepts your requests. You can read more about the gRPC service on the official website: <a href="grpc.io">grpc.io</a>
 							Before using the API, you have to register and create a new key, or download a free trial key in case you want to test the service. You can choose as many modules as you want.
 							<br><br>
+                            <!--Switch-->
 <!--							Show setup for:-->
 <!--							<input name="setup_for" type="radio" value="ubu" id="ubuntu" checked>-->
 <!--							<label for="ubuntu">-->
@@ -226,74 +227,83 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 						<p>
 							Face Detector module supports image processing. See how to <a href="#fd_image">initialize Image instance</a>
 						</p>
-						<h4 id="fd_init">Initialization</h4>
-						<p>
-							Import FaceDetector module to your project
-<pre><code>import api.recognition.FaceDetection as FD</code></pre>
-						</p>
-						<p>
-							Create FaceDetector instance with your authentication key (see  <a href="#usage">ClientApi/Usage</a>)
-<pre><code>face_detector = FD.FaceDetector(key_auth)</code></pre>
-						</p>
-						<h4 id="fd_image">Image processing</h4>
-						<p>
-							To process an image, you will first need to create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>). Then, you can process the image via Face Detector. Note, that this is a blocking operation.
-						</p>
-<pre><code>image_result, status, error_msg = face_detector.on_image(image)</code></pre>
-						<p>
-							If status==2, some errors occurred. You can see a detailed error description in error_msg. Otherwise, Face Detector processed the image correctly, and the result will appear in the image_result variable.
-						</p>
-						<p>
-							Face Detector result type is dict, contains one field ‘FaceDetector’, and
-						</p> 
-<pre><code>image_result[‘FaceDetector’]</code></pre>
+						<div id="fd_init">
+							<h4 >Initialization</h4>
+							<p>
+								Import FaceDetector module to your project
+							<pre><code>import api.recognition.FaceDetection as FD</code></pre>
+							</p>
+							<p>
+								Create FaceDetector instance with your authentication key (see  <a href="#usage">ClientApi/Usage</a>)
+							<pre><code>face_detector = FD.FaceDetector(key_auth)</code></pre>
+							</p>
+						</div>
+						<div id="fd_image">
+							<h4>Image processing</h4>
+							<p>
+								To process an image, you will first need to create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>). Then, you can process the image via Face Detector. Note, that this is a blocking operation.
+							</p>
+							<pre><code>image_result, status, error_msg = face_detector.on_image(image)</code></pre>
+							<p>
+								If status==2, some errors occurred. You can see a detailed error description in error_msg. Otherwise, Face Detector processed the image correctly, and the result will appear in the image_result variable.
+							</p>
+							<p>
+								Face Detector result type is dict, contains one field ‘FaceDetector’, and
+							</p>
+							<pre><code>image_result[‘FaceDetector’]</code></pre>
 							<p>contains a list-like array of detected faces. Each face is a dict with ‘x’, ‘y’, ‘w’ and ‘h’ fields in cv-like coordinates.</p>
 
 							<p>Sample result:</p>
-<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45}, 
+							<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45},
 {‘x’: 100, ‘y’: 30, ‘w’: 45, ‘h’: 45}]</code></pre>
-						<p>You can see more examples on the GitHub page.</p>
+							<p>You can see more examples on the GitHub page.</p>
+						</div>
+
 					</div>
 					<div id="er" class="link">
 						<h3>Emotion Recognition</h3>
 						<p>
 							Emotion Recognition module supports image processing. See how to <a href="#classes">initialize Image instance</a>
 						</p>
-						<h4 id="er_init">
-							Initialization
-						</h4>
-						<p>
-							Import EmotionRecognition module to your project
-<pre><code>import api.recognition.EmotionRecognition as ER</code></pre>
-						</p>
-						<p>
-							Create EmotionRecognition instance with your authentication key (see <a href="#usage">ClientApi/Usage</a>)
-<pre><code>emo_recognizer = ER.EmotionRecognition(key_auth)</code></pre>
-						</p>
-						<h4 id="er_image">Image processing</h4>
-						<p>
-							To process an image, you need first create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>). Then, you can process the image via Emotion Recognition. Note, that this is a blocking operation.
-						</p>
-<pre><code>image_result, status, error_msg = emo_recognizer.on_image(image)</code></pre>
-						<p>
-							If status==2, some errors occurred. You can see a detailed error description in error_msg. Otherwise, Emotion Recognition processed the image correctly, and the result will appear in the image_result variable.
-						</p>
-						<p>
-							Emotion Recognition result type is dict, contains two fields: ‘FaceDetector’ and ‘EmotionRecognition’. Data in ‘FaceDetector’ field is identical to Face Detector result <a href="#fd_image">APIModules/FaceDetector/ImageProcessing</a>
-						</p>
-						<p>
-							Sample result:
-						</p>
-<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45, "emotions": [ 
-	[0.9151450991630554, "Surprise"], 
-	[0.07965227961540222, "Happiness"], 
-	[0.004168621730059385, "Anxiety"], 
-	[0.0005960435955785215, "Anger"], 
-	[0.00035987311275675893, "Neutral"], 
+						<div id="er_init">
+							<h4>
+								Initialization
+							</h4>
+							<p>
+								Import EmotionRecognition module to your project
+							<pre><code>import api.recognition.EmotionRecognition as ER</code></pre>
+							</p>
+							<p>
+								Create EmotionRecognition instance with your authentication key (see <a href="#usage">ClientApi/Usage</a>)
+							<pre><code>emo_recognizer = ER.EmotionRecognition(key_auth)</code></pre>
+							</p>
+						</div>
+						<div id="er_image">
+							<h4>Image processing</h4>
+							<p>
+								To process an image, you need first create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>). Then, you can process the image via Emotion Recognition. Note, that this is a blocking operation.
+							</p>
+							<pre><code>image_result, status, error_msg = emo_recognizer.on_image(image)</code></pre>
+							<p>
+								If status==2, some errors occurred. You can see a detailed error description in error_msg. Otherwise, Emotion Recognition processed the image correctly, and the result will appear in the image_result variable.
+							</p>
+							<p>
+								Emotion Recognition result type is dict, contains two fields: ‘FaceDetector’ and ‘EmotionRecognition’. Data in ‘FaceDetector’ field is identical to Face Detector result <a href="#fd_image">APIModules/FaceDetector/ImageProcessing</a>
+							</p>
+							<p>
+								Sample result:
+							</p>
+							<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45, "emotions": [
+	[0.9151450991630554, "Surprise"],
+	[0.07965227961540222, "Happiness"],
+	[0.004168621730059385, "Anxiety"],
+	[0.0005960435955785215, "Anger"],
+	[0.00035987311275675893, "Neutral"],
 	[7.289356290129945e-05, "Sadness"],
 	[5.118385161040351e-06, "Disgust"]
 ]}]</code></pre>
-						<p>You can see more examples on the GitHub page.</p>
+							<p>You can see more examples on the GitHub page.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -425,7 +435,7 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 	<!-- Resources -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@4/dist/gumshoe.polyfills.min.js"></script>
 	<script src="js/home.js"></script>
 </body>
 </html>
