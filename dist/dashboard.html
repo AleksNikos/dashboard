@@ -458,9 +458,41 @@
 								</div>
 							</div>
                             <div class="result"></div>
-							<div class="canvas-container">
-								<canvas id="myChart"></canvas>
-							</div>
+                            <div class="canvas-container" style="position:relative;">
+                                <canvas id="myChart"></canvas>
+                                <div id="black_tooltip_right" style="pointer-events:none;display:none;position:absolute;background: rgba(30, 37, 73, 0.15);height:210px;top:5px;right:10px;">
+
+                                </div>
+                                <div id="black_tooltip" style="pointer-events:none;display:none;position:absolute;background: rgba(30, 37, 73, 0.15);height:210px;top:5px;left:40px;">
+
+                                </div>
+                                <div id="fd_legend" style="position:absolute;right:-10px;top:0px;color: #855DF8;">
+                                    Fd
+                                </div>
+                                <div id="er_legend" style="position:absolute;right:-10px;top:0px;color: #54F0FF;;">
+                                    Er
+                                </div>
+                                <div id="special_tooltip" style="pointer-events:none;display:none;position:absolute;background: rgba(30, 37, 73, 0.5);height:210px;width:190px;top:5px;left:0px;">
+                                    <div style="margin:20px;">
+                                        <p style="color:white;" id="all_tip">18</p>
+                                        <p style="color:white;font-size:14px;opacity:0.6;">times total</p>
+                                    </div>
+                                    <div style="margin:20px;">
+                                        <p style="color:white;" id="fd_tip">5&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style="color:#FF729A;">-8&nbsp;&nbsp;&darr;</span>
+                                        </p>
+                                        <div style="background:#6673B4;display:inline-block;width:12px;height:12px;float:left;margin-top:5px;border-radius:100%;"></div>
+                                        <p style="color:white;font-size:14px;opacity:0.6;">&nbsp;&nbsp;Face detector</p>
+                                    </div>
+                                    <div style="margin:20px;">
+                                        <p style="color:white;" id="er_tip">14&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style="color:#B8E986;">+4&nbsp;&nbsp;&uarr;</span>
+                                        </p>
+                                        <div style="background:#54F0FF;display:inline-block;width:12px;height:12px;float:left;margin-top:5px;border-radius:100%;"></div>
+                                        <p style="color:white;font-size:14px;opacity:0.6;">&nbsp;&nbsp;Emotion recognition</p>
+                                    </div>
+                                </div>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -513,61 +545,61 @@
 <!--				</svg>-->
 <!--			</a>-->
 <!--		</div>-->
-		<div class="graph-mobile">
-			<canvas id="graph-mobile"></canvas>
-		</div>
-		<div class="info">
-			<div class="block date">
-				<div class="date">
+        <div class="graph-mobile">
+            <canvas id="graph-mobile"></canvas>
+            <div id="fd_legend_mobile">
+                Fd
+            </div>
+            <div id="er_legend_mobile">
+                Er
+            </div>
+            <div id="black_tooltip_right_mobile">
+
+            </div>
+            <div id="black_tooltip_mobile">
+
+            </div>
+        </div>
+        <div class="info">
+            <div class="block date">
+                <div class="date">
 					<span class="month">
-						Nov
+						Mar
 					</span>
-					<span class="year">
+                    <span class="year">
 						2019
 					</span>
-				</div>
-				<div class="show">
-					Daily
-				</div>
-			</div>
-			<div class="block times">
-				<div class="val">
-					23154
-				</div>
-				<div class="desc">
-					times total
-				</div>
-			</div>
-			<div class="block fd">
-				<div class="val">
-					12839
-					<span class="percent green">
-						+15%
-						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.93782 6.70937C5.97927 6.74896 6 6.80833 6 6.8875C6 6.96667 5.97927 7.02604 5.93782 7.06563C4.13471 8.62918 3.2228 9.42083 3.20207 9.44063C3.16062 9.48021 3.09845 9.5 3.01554 9.5C2.93264 9.5 2.87047 9.48021 2.82902 9.44063L0.0932647 7.06563C-0.0310882 6.94687 -0.0310882 6.82813 0.0932647 6.70937C0.217618 6.59062 0.341969 6.59062 0.466322 6.70937L2.76684 8.69844V0.2375C2.76684 0.0791659 2.84974 0 3.01554 0C3.18135 0 3.26425 0.0791659 3.26425 0.2375V8.69844L5.56477 6.70937C5.68912 6.59062 5.81347 6.59062 5.93782 6.70937Z" fill="#D0D8FF"/>
-						</svg>
-					</span>
-				</div>
-				<div class="desc">
-					Face detector
-				</div>
-			</div>
-			<div class="block er">
-				<div class="val">
-					10315
-					<span class="percent red">
-						-4%
-						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.93782 6.70937C5.97927 6.74896 6 6.80833 6 6.8875C6 6.96667 5.97927 7.02604 5.93782 7.06563C4.13471 8.62918 3.2228 9.42083 3.20207 9.44063C3.16062 9.48021 3.09845 9.5 3.01554 9.5C2.93264 9.5 2.87047 9.48021 2.82902 9.44063L0.0932647 7.06563C-0.0310882 6.94687 -0.0310882 6.82813 0.0932647 6.70937C0.217618 6.59062 0.341969 6.59062 0.466322 6.70937L2.76684 8.69844V0.2375C2.76684 0.0791659 2.84974 0 3.01554 0C3.18135 0 3.26425 0.0791659 3.26425 0.2375V8.69844L5.56477 6.70937C5.68912 6.59062 5.81347 6.59062 5.93782 6.70937Z" fill="#D0D8FF"/>
-						</svg>
+                </div>
+                <div class="show">
+                    Daily
+                </div>
+            </div>
+            <div class="block times">
+                <div class="val" id="mobile_times_total">
+                    23154
+                </div>
+                <div class="desc">
+                    times total
+                </div>
+            </div>
+            <div class="block fd">
+                <div class="val" id="mobile_fd">
 
-					</span>
-				</div>
-				<div class="desc">
-					Em. recognition
-				</div>
-			</div>
-		</div>
+                </div>
+                <div class="desc">
+                    Face detector
+                </div>
+            </div>
+            <div class="block er">
+                <div class="val" id="mobile_er">
+
+
+                </div>
+                <div class="desc">
+                    Em. recognition
+                </div>
+            </div>
+        </div>
 	</div>
 
 
