@@ -86,8 +86,10 @@
 						Documentation
 					</div>
 					<ul>
-						<li class="api_client active">
-							<a href="#api_client"><span>API <br />client</span></a>
+						<li class="api_client">
+							<a href="#api_client" class="tablinks" onclick="tab_docs(event, 'api_client')">
+								<span>API <br />client</span>
+							</a>
 							<ul class="inset">
 								<li><a href="#installation">Installation</a></li>
 								<li><a href="#usage">Usage</a></li>
@@ -95,14 +97,18 @@
 							</ul>
 						</li>
 						<li class="fd">
-							<a href="#fd"><span>Face detector <br /> module</span></a>
+							<a href="#fd" class="tablinks" onclick="tab_docs(event, 'fd')">
+								<span>Face detector <br /> module</span>
+							</a>
 							<ul class="inset">
 								<li><a href="#fd_init">Initialization</a></li>
 								<li><a href="#fd_image">Image processing</a></li>
 							</ul>
 						</li>
 						<li class="er">
-							<a href="#er"><span>Emotion recognition <br /> module</span></a>
+							<a href="#er" class="tablinks" onclick="tab_docs(event, 'er')">
+								<span>Emotion recognition <br /> module</span>
+							</a>
 							<ul class="inset">
 								<li><a href="#er_init">Initialization</a></li>
 								<li><a href="#er_image">Image processing</a></li>
@@ -111,7 +117,7 @@
 					</ul>
 				</nav>
 				<div class="content-docs">
-					<div id="api_client" class="link">
+					<div id="api_client" class="link tabcontents">
 						<h1 class="title">
 							API client
 						</h1>
@@ -220,10 +226,9 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							</p>
 						</div>
 					</div>
-
-					<h2>API modules</h2>
-					<div id="fd" class="link">
-						<h3>Face Detector</h3>
+<!--					<h2>API modules</h2>-->
+					<div id="fd" class="link tabcontents">
+						<h2>Face Detector</h2>
 						<p>
 							Face Detector module supports image processing. See how to <a href="#fd_image">initialize Image instance</a>
 						</p>
@@ -260,8 +265,8 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 						</div>
 
 					</div>
-					<div id="er" class="link">
-						<h3>Emotion Recognition</h3>
+					<div id="er" class="link tabcontents">
+						<h2>Emotion Recognition</h2>
 						<p>
 							Emotion Recognition module supports image processing. See how to <a href="#classes">initialize Image instance</a>
 						</p>

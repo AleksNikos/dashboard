@@ -296,7 +296,7 @@
 							</a>
 							<a href="mailto:support@neurodatalab.dev">support@neurodatalab.dev</a>
 							<a href="faq.html">f.a.q.</a>
-							<a href="terms.html">terms</a>
+							<a data-fancybox data-src="#success" href="javascript:;" class="success">terms</a>
 						</div>
 					</div>
 				</div>
@@ -319,11 +319,11 @@
 			<form action="#">
 				<div class="inp-wr">
 					<span>Email</span>
-					<input type="email" placeholder="Enter your E-mail address">
+					<input type="email" placeholder="E-mail">
 				</div>
 				<div class="inp-wr">
 					<span>Password</span>
-					<input type="password" placeholder="Enter your password" class="password">
+					<input type="password" placeholder="Password" class="password">
 					<div class="hide-show">
 				        <span>Show</span>
 				    </div>
@@ -353,22 +353,22 @@
 			<form action="#">
 				<div class="inp-wr">
 					<span>Name</span>
-					<input type="text" placeholder="Enter your name">
+					<input type="text" placeholder="Name">
 				</div>
 				<div class="inp-wr">
 					<span>Company</span>
-					<input type="text" placeholder="Enter your company">
+					<input type="text" placeholder="Company">
 				</div>
 <!--				Добавить класс error если валидация не пройдена-->
 <!--				Add class error if validation was error-->
 				<div class="inp-wr error">
 					<span>Email</span>
-					<input type="email" placeholder="Enter your E-mail address">
+					<input type="email" placeholder="E-mail">
 					<div class="info"></div>
 				</div>
 				<div class="inp-wr">
 					<span>Password</span>
-					<input type="password" class="password" placeholder="Enter your password">
+					<input type="password" class="password" placeholder="Password">
 					<div class="info"></div>
 				</div>
 				<div class="inp-wr remember">
@@ -826,6 +826,9 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 		<h4>
 			Verification email sent
 		</h4>
+		<p>
+			Please, check your inbox to verify the email address.
+		</p>
 	</div>
 	<!-- Resources -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
