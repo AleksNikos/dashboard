@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="204" height="158" viewBox="0 0 204 158">
+    <defs>
+        <linearGradient id="a" x1="52.659%" x2="52.659%" y1="0%" y2="100%">
+            <stop offset="2.461%" stop-color="#936DFF"/>
+            <stop offset="100%" stop-color="#5F44CF"/>
+        </linearGradient>
+        <filter id="b" width="115.8%" height="126.9%" x="-8.1%" y="-13.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <linearGradient id="c" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#127DB0"/>
+            <stop offset="100%" stop-color="#54F0FF"/>
+        </linearGradient>
+        <filter id="d" width="115.1%" height="146.6%" x="-7.6%" y="-22.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-width="2">
+        <path stroke="url(#a)" d="M8 34.75l20.704-23.734 13.731 42.352 19.677 18.77 8.237-36.973 8.612-17.083L87.561 0l7.678 60.752 9.105 59.375L113.893 133l7.173-26.767L130 93.043l8.692-41.225 8.594-46.721L157.432.263H203" filter="url(#b)" transform="translate(-10 13)"/>
+        <path stroke="url(#c)" d="M0 42.949l28.221-2.051L40.026 31l8.638 29.245 12.65 49.215 17.128-76.192 7.52 48.963 11.15-47.576 11.943 24.264 6.238 41.257 11.039-31.492 2.133-28.342 17.742 15.1L152.96 110l46.04-.54" filter="url(#d)" transform="translate(-10 13)"/>
+        <path stroke="url(#a)" d="M8 34.75l20.704-23.734 13.731 42.352 19.677 18.77 8.237-36.973 8.612-17.083L87.561 0l7.678 60.752 9.105 59.375L113.893 133l7.173-26.767L130 93.043l8.692-41.225 8.594-46.721L157.432.263H203" transform="translate(-10 13)"/>
+        <path stroke="url(#c)" d="M0 42.949l28.221-2.051L40.026 31l8.638 29.245 12.65 49.215 17.128-76.192 7.52 48.963 11.15-47.576 11.943 24.264 6.238 41.257 11.039-31.492 2.133-28.342 17.742 15.1L152.96 110l46.04-.54" transform="translate(-10 13)"/>
+    </g>
+</svg>
