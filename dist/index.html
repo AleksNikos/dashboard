@@ -845,5 +845,66 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/home.js"></script>
+    <script>
+		$(window).load(function(){response_home();});
+		$(window).ready(function(){response_home();});
+		$(window).resize(function(){response_home();});
+		function response_home() {
+			var lines_w;
+			var lines_left;
+			var padding_left;
+			var lines_h;
+			var demo_block_h;
+			var demo_title_block_h;
+			var padding_top;
+			var top_k;
+
+			if($(window).width() > 500){
+				lines_w=$('.lines-pulse').width();
+				lines_left=0;
+				padding_left = lines_w-lines_left - $('.demo').offset().left - 30;
+				if (lines_w < 601) {
+					lines_w=600;
+					padding_left = 0;
+				} else {
+
+					$('.lines-pulse').css("left","0px");
+				}
+				lines_left = lines_w - $('.demo_block').offset().left - 25;
+				lines_h = lines_w * 0.498;
+				demo_block_h = $('.demo_block').height();
+				demo_title_block_h = $('.title_block').height();
+				top_k=50;
+
+				padding_top = $('.demo').offset().top+parseInt($('.demo').css('padding-top'))-(lines_h/2-demo_block_h/2)+top_k;
+
+				$('.lines-pulse').css("left", - lines_left + "px");
+				$('.lines-pulse').css("top", padding_top + "px");
+			}
+			else
+			{
+				lines_w=$('.lines-pulse').width();
+				var picture_w = 204;
+				var picture_h = 158;
+				var pictureCoef = picture_h/picture_w;
+				lines_left=0;
+				padding_left = lines_w - lines_left - $('.demo').offset().left;
+				lines_h = lines_w * pictureCoef;
+				demo_block_h = $('.demo_block').height();
+				demo_title_block_h = $('.title_block').height();
+				top_k=35;
+				if($(window).width() > 563){
+					top_k=45;
+
+				}
+
+				padding_top = $('.demo_block').offset().top-(picture_h/2-demo_block_h/2)+top_k;
+				$('.lines-pulse').css("left",($('.demo_block').offset().left-picture_w+45)+"px");
+				$('.lines-pulse').css("top", padding_top + "px");
+				$('.lines-pulse').css("min-width","300px");
+			}
+		}
+
+	</script>
 </body>
 </html>
