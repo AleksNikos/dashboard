@@ -15,6 +15,43 @@
 	<link rel="stylesheet" href="css/home-media.css">
 </head>
 <body>
+	<!-- Menu -->
+	<div class="topnav">
+		<div id="menu">
+			<a class="" href="index.html">Home</a>
+			<a href="docs.html" class="active">Docs</a>
+			<a data-fancybox data-src="#login" href="javascript:;" class="login-btn">Login</a>
+		</div>
+	</div>
+	<a href="javascript:void(0);" class="menu docs icon">
+		<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+					<stop stop-color="#6673B4" offset="0%"></stop>
+					<stop stop-color="#9EAEFF" offset="100%"></stop>
+				</linearGradient>
+				<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="pink">
+					<stop stop-color="#feb4b4" offset="0%"></stop>
+					<stop stop-color="#ff729a" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
+					<g id="Group-3" transform="translate(25.000000, 15.000000)">
+						<rect id="Rectangle" fill="#D0D8FF" x="0" y="13" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
+					</g>
+					<g id="Group-4" transform="translate(25.000000, 15.000000)">
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="13" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="6.5" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="0" width="15" height="2"></rect>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</a>
+	<!-- End menu -->
 	<div class="topbar-wrap docs">
 		<div class="wrapper">
 			<div class="row">
@@ -50,102 +87,91 @@
 		</div>
 	</div>
 
-	<!-- Menu -->
-	<div class="topnav">
-		<div id="menu">
-			<a class="active" href="index.html">Home</a>
-			<a href="docs.html">Docs</a>
-			<a data-fancybox data-src="#login" href="javascript:;" class="login-btn">Login</a>
+	<nav class="vertical-nav">
+		<div class="title">
+			Documentation
 		</div>
-	</div>
-	<a href="javascript:void(0);" class="menu icon">
-		<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		    <defs>
-		        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-		            <stop stop-color="#6673B4" offset="0%"></stop>
-		            <stop stop-color="#9EAEFF" offset="100%"></stop>
-		        </linearGradient>
-		    </defs>
-		    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-		        <g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
-		            <g id="Group-3" transform="translate(25.000000, 15.000000)">
-		                <rect id="Rectangle" fill="#D0D8FF" x="0" y="13" width="15" height="2"></rect>
-		                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
-		                <rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
-		            </g>
-		        </g>
-		    </g>
-		</svg>
-	</a>
-	<!-- End menu -->
+		<ul class="nav-wrap">
+			<li class="api_client tablinks active" onclick="tab_docs(event, 'api_client'); return false;">
+				<a class="tab__link" href="#api_client">
+					<span class="icon">
+						<img src="img/pi.svg" alt="API">
+					</span>
+					<span class="title_menu">API <br />client</span>
+				</a>
+				<ul class="inset">
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#classes">Classes</a></li>
+				</ul>
+			</li>
+			<li class="fd tablinks next" onclick="tab_docs(event, 'fd'); return false;">
+				<a class="tab__link" href="#fd">
+					<span class="icon">
+						<img src="img/icon-fd.svg" alt="API">
+					</span>
+					<span class="title_menu">Face detector <br /> module</span>
+				</a>
+				<ul class="inset">
+					<li><a href="#fd_init">Initialization</a></li>
+					<li><a href="#fd_image">Image processing</a></li>
+				</ul>
+			</li>
+			<li class="er tablinks" onclick="tab_docs(event, 'er'); return false;">
+				<a class="tab__link" href="#er">
+					<span class="icon">
+						<img src="img/icon-er.svg" alt="API">
+					</span>
+					<span class="title_menu">Emotion recognition <br /> module</span>
+				</a>
+				<ul class="inset">
+					<li><a href="#er_init">Initialization</a></li>
+					<li><a href="#er_image">Image processing</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
 	<section id="docs" class="docs">
 		<div class="wrapper">
 			<div class="row">
-				<nav class="vertical-nav">
-					<div class="title">
-						Documentation
-					</div>
-					<ul>
-						<li class="api_client tablinks" onclick="tab_docs(event, 'api_client')">
-							<a href="#api_client">
-								<span>API <br />client</span>
-							</a>
-							<ul class="inset">
-								<li><a href="#installation">Installation</a></li>
-								<li><a href="#usage">Usage</a></li>
-								<li><a href="#classes">Classes</a></li>
-							</ul>
-						</li>
-						<li class="fd tablinks" onclick="tab_docs(event, 'fd')">
-							<a href="#fd">
-								<span>Face detector <br /> module</span>
-							</a>
-							<ul class="inset">
-								<li><a href="#fd_init">Initialization</a></li>
-								<li><a href="#fd_image">Image processing</a></li>
-							</ul>
-						</li>
-						<li class="er tablinks" onclick="tab_docs(event, 'er')">
-							<a href="#er">
-								<span>Emotion recognition <br /> module</span>
-							</a>
-							<ul class="inset">
-								<li><a href="#er_init">Initialization</a></li>
-								<li><a href="#er_image">Image processing</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
 				<div class="content-docs">
 					<div id="api_client" class="link tabcontents">
 						<h1 class="title">
 							API client
 						</h1>
 						<p>
-							Our system works with the <span>gRPC service</span> developed by Google. It allows data transferring to the server quickly and safely, with no need to worry if someone intercepts your requests. You can read more about the gRPC service on the official website: <a href="grpc.io">grpc.io</a>
+							Our system works with the <span class="blue">gRPC service</span> developed by Google. It allows data transferring to the server quickly and safely, with no need to worry if someone intercepts your requests. You can read more about the gRPC service on the official website: <a href="https://grpc.io" target="_blank">grpc.io</a>
 							Before using the API, you have to register and create a new key, or download a free trial key in case you want to test the service. You can choose as many modules as you want.
 							<br><br>
                             <!--Switch-->
-							Show setup for:
-							<span>Ubuntu: </span>
-							<input name="ubuntu" type="radio" value="16" id="ub16">
-							<label for="ub16">
-								16
-							</label>
-							<input name="ubuntu" type="radio" value="18" id="ub18" checked="checked">
-							<label for="ub18" class="round_gradient">
-								18
-							</label>
-							 <span class="plus">+</span>
-							<span>Python: </span>
-							<input name="python" type="radio" value="2.7" id="pyt2">
-							<label for="pyt2">
-								2.7
-							</label>
-							<input name="python" type="radio" value="3.7" id="pyt3" checked="checked">
-							<label for="pyt3" class="round_gradient">
-								3.7
-							</label>
+							<span class="title">
+								Show setup for:
+							</span>
+							<span class="switch">
+									<span class="ubuntu">
+									<span>Ubuntu: </span>
+									<input name="ubuntu" type="radio" value="16" id="ub16">
+									<label for="ub16">
+										16
+									</label>
+									<input name="ubuntu" type="radio" value="18" id="ub18" checked="checked">
+									<label for="ub18" class="round_gradient">
+										18
+									</label>
+								</span>
+								<span class="plus">+</span>
+								<span class="python">
+									<span>Python: </span>
+									<input name="python" type="radio" value="2.7" id="pyt2">
+									<label for="pyt2">
+										2.7
+									</label>
+									<input name="python" type="radio" value="3.7" id="pyt3" checked="checked">
+									<label for="pyt3" class="round_gradient">
+										3.7
+									</label>
+								</span>
+							</span>
 						</p>
 						<div id="installation">
 							<h2>Installation</h2>
@@ -164,12 +190,12 @@
 								<li>
 									1.3 Install requirements:
 									<br />
-									<pre><code>python2 [python3] -m pip install -r -requirements.txt</code></pre>
+									<pre><code>python2 [python3] -m pip <span class="pink">install</span> -r <span class="violet">-requirements.txt</span></code></pre>
 								</li>
 								<li>
 									1.4 Create proto files for the gRPC:
 									<br />
-									<pre><code>source ./make_proto_python2.sh [make_proto_python3.sh]</code></pre>
+									<pre><code>source ./make_proto_python2.sh [<span class="violet">make_proto_python3.sh</span>]</code></pre>
 									<br />
 									1.5 All generated files will be placed into <br />
 									<pre><code>api-service/python/pyproto</code></pre>
@@ -212,7 +238,8 @@ ssl_auth = Auth.SslCredential(osp.join(cert_home, <span class="violet">'client.k
 
 key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</span>, osp.join(cert_home, <span class="violet">'root.json'</span>), ssl_auth)</code></pre>
 							<p>
-								After successful authorization, you can use the modules supported by your key. For detailed information about the modules see Modules Info. Also, you can see an example on our GitHub page api-service/python/demo.py
+								After successful authorization, you can use the modules supported by your key. For detailed information about the modules see Modules Info. Also, you can see an example on our
+								<a href="https://github.com/NeurodataLab/api-service">GitHub page.</a> <pre><code>api-service/python/demo.py</code></pre>
 							</p>
 						</div>
 						<div id="classes">
@@ -221,26 +248,28 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							<p>
 								To process an image, you will first have to prepare it.
 							</p>
-							<pre><code>from api.utils.image import Image</code></pre>
+							<pre><code><span class="pink">from</span> api.utils.image <span class="pink">import</span> Image</code></pre>
 							<p>
 								You can initialize Image instance from the path
 							</p>
-							<pre><code>image = Image.from_file('some_image.jpg')</code></pre>
+							<pre><code>image = Image.from_file('<span class="violet">some_image.jpg</span>')</code></pre>
 							<p>
 								Or you can initialize Image instance from a cv2-like image
 							</p>
 							<pre><code>image = Image.from_bgr(bgr_image)</code></pre>
 							<p>
-								After initialization, you can process this image via the module which supports image processing, for example: <a href="#fd">Face Detector</a>
+								After initialization, you can process this image via the module which supports image processing, for example:
+								<a href="#fd">Face Detector.</a>
 							</p>
+							<br>
 							<p>
-								See example on the GitHub page.
+								See example on the <a href="https://github.com/NeurodataLab/api-service">GitHub page</a>.
 							</p>
 						</div>
 					</div>
 <!--					<h2>API modules</h2>-->
 					<div id="fd" class="link tabcontents">
-						<h2>Face Detector</h2>
+						<h1 class="title">Face Detector</h1>
 						<p>
 							Face Detector module supports image processing. See how to <a href="#fd_image">initialize Image instance</a>
 						</p>
@@ -248,7 +277,7 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							<h4 >Initialization</h4>
 							<p>
 								Import FaceDetector module to your project
-							<pre><code>import api.recognition.FaceDetection as FD</code></pre>
+							<pre><code><span class="pink">import</span> api.recognition.FaceDetection <span class="pink">as</span> FD</code></pre>
 							</p>
 							<p>
 								Create FaceDetector instance with your authentication key (see  <a href="#usage">ClientApi/Usage</a>)
@@ -267,18 +296,18 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							<p>
 								Face Detector result type is dict, contains one field ‘FaceDetector’, and
 							</p>
-							<pre><code>image_result[‘FaceDetector’]</code></pre>
+							<pre><code>image_result[<span class="violet">‘FaceDetector’</span>]</code></pre>
 							<p>contains a list-like array of detected faces. Each face is a dict with ‘x’, ‘y’, ‘w’ and ‘h’ fields in cv-like coordinates.</p>
 
 							<p>Sample result:</p>
-							<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45},
-{‘x’: 100, ‘y’: 30, ‘w’: 45, ‘h’: 45}]</code></pre>
-							<p>You can see more examples on the GitHub page.</p>
+							<pre><code>[{<span class="violet">‘x’</span>: <span class="green">10</span>,<span class="violet"> ‘y’</span>: <span class="green">20</span>, <span class="violet">‘w’</span>: <span class="green">40</span>,<span class="violet"> ‘h’</span>: <span class="green">45</span>},
+{<span class="violet">‘x</span>’: <span class="green">100</span>, <span class="violet">‘y’</span>: <span class="green">30</span>, <span class="violet">‘w’</span>: <span class="green">45</span>, <span class="violet">‘h’</span>: <span class="green">45</span>}]</code></pre>
+							<p>You can see more examples on the <a href="https://github.com/NeurodataLab/api-service">GitHub page</a>.</p>
 						</div>
 
 					</div>
 					<div id="er" class="link tabcontents">
-						<h2>Emotion Recognition</h2>
+						<h1 class="title">Emotion Recognition</h1>
 						<p>
 							Emotion Recognition module supports image processing. See how to <a href="#classes">initialize Image instance</a>
 						</p>
@@ -288,7 +317,7 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							</h4>
 							<p>
 								Import EmotionRecognition module to your project
-							<pre><code>import api.recognition.EmotionRecognition as ER</code></pre>
+							<pre><code><span class="pink">import</span> api.recognition.EmotionRecognition <span class="pink">as</span> ER</code></pre>
 							</p>
 							<p>
 								Create EmotionRecognition instance with your authentication key (see <a href="#usage">ClientApi/Usage</a>)
@@ -298,7 +327,8 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 						<div id="er_image">
 							<h4>Image processing</h4>
 							<p>
-								To process an image, you need first create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>). Then, you can process the image via Emotion Recognition. Note, that this is a blocking operation.
+								To process an image, you need first create Image instance (see <a href="#classes">ClienAPI/Classes/Image</a>).
+								Then, you can process the image via Emotion Recognition. Note, that this is a blocking operation.
 							</p>
 							<pre><code>image_result, status, error_msg = emo_recognizer.on_image(image)</code></pre>
 							<p>
@@ -310,16 +340,16 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 							<p>
 								Sample result:
 							</p>
-							<pre><code>[{‘x’: 10, ‘y’: 20, ‘w’: 40, ‘h’: 45, "emotions": [
-	[0.9151450991630554, "Surprise"],
-	[0.07965227961540222, "Happiness"],
-	[0.004168621730059385, "Anxiety"],
-	[0.0005960435955785215, "Anger"],
-	[0.00035987311275675893, "Neutral"],
-	[7.289356290129945e-05, "Sadness"],
-	[5.118385161040351e-06, "Disgust"]
+							<pre><code>[{<span class="violet">‘x’</span>: <span class="green">10</span>, <span class="violet">‘y’</span>: <span class="green">20</span>, <span class="violet">‘w’</span>: <span class="green">40</span>, <span class="violet">‘h’</span>: <span class="green">45</span>, <span class="violet">"emotions"</span>: [
+	[<span class="green">0.9151450991630554</span>, <span class="violet">"Surprise"</span>],
+	[<span class="green">0.07965227961540222</span>, <span class="violet">"Happiness"</span>],
+	[<span class="green">0.004168621730059385</span>, <span class="violet">"Anxiety"</span>],
+	[<span class="green">0.0005960435955785215</span>, <span class="violet">"Anger"</span>],
+	[<span class="green">0.00035987311275675893</span>, <span class="violet">"Neutral"</span>],
+	[<span class="green">7.289356290129945e-05</span>, <span class="violet">"Sadness"</span>],
+	[<span class="green">5.118385161040351e-06</span>, <span class="violet">"Disgust"</span>]
 ]}]</code></pre>
-							<p>You can see more examples on the GitHub page.</p>
+							<p>You can see more examples on the <a href="https://github.com/NeurodataLab/api-service">GitHub page</a>.</p>
 						</div>
 					</div>
 				</div>
@@ -357,19 +387,19 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 			<img src="img/close.svg" alt="">
 		</a>
 		<div class="tab">
-			<button class="tablinks login-btn-tab" onclick="tab_login(event, 'login-popup')">Login</button>
-			<button class="tablinks create-btn-tab" onclick="tab_login(event, 'create-popup')">Create account</button>
+			<button class="tablink login-btn-tab" onclick="tab_login(event, 'login-popup')">Login</button>
+			<button class="tablink create-btn-tab" onclick="tab_login(event, 'create-popup')">Create account</button>
 		</div>
 
 		<div id="login-popup" class="tabcontent">
 			<form action="#">
 				<div class="inp-wr">
 					<span>Email</span>
-					<input type="email" placeholder="Enter your E-mail address">
+					<input type="email" placeholder="E-mail">
 				</div>
 				<div class="inp-wr">
 					<span>Password</span>
-					<input type="password" placeholder="Enter your password">
+					<input type="password" placeholder="Password">
 				</div>
 				<div class="inp-wr remember">
 					<label>Remember me
@@ -396,22 +426,22 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 			<form action="#">
 				<div class="inp-wr">
 					<span>Name</span>
-					<input type="text" placeholder="Enter your name">
+					<input type="text" placeholder="Name">
 				</div>
 				<div class="inp-wr">
 					<span>Company</span>
-					<input type="text" placeholder="Enter your company">
+					<input type="text" placeholder="Company">
 				</div>
 				<div class="inp-wr">
 					<span>Email</span>
-					<input type="email" placeholder="Enter your E-mail address">
+					<input type="email" placeholder="E-mail">
 				</div>
 				<div class="inp-wr">
 					<span>Password</span>
-					<input type="password" placeholder="Enter your password">
+					<input type="password" placeholder="Password">
 				</div>
 				<div class="inp-wr remember">
-					<label>I agree with <a href="terms.html">Terms</a>
+					<label>I agree with <a data-fancybox data-src="#terms" href="javascript:;" class="success">Terms</a>
 						<input type="checkbox">
 						<span class="checkmark"></span>
 					</label>
@@ -445,9 +475,18 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 			<p class="informer">
 				If you forgot your email, please, contact
 				<br />
-				<a href="#">support@neurodatalab.dev</a>
+				<a href="mailto:support@neurodatalab.dev">support@neurodatalab.dev</a>
 			</p>		
 		</div>
+	</div>
+	<div id="terms" class="modal">
+		<a class="close-btn" onclick="$.fancybox.close();" href="javascript:;">
+			<img src="img/close.svg" alt="Close">
+		</a>
+		<h2>Terms</h2>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
 	</div>
 	<!-- Resources -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
@@ -456,7 +495,7 @@ key_auth = Auth.AuthCredential(<span class="violet">'emotionsdemo.com:50051'</sp
 	<script src="js/home.js"></script>
 	<script>
 		//Scrollspy
-		if($(window).width() > 560){
+		if($(window).width() > 992){
 			var spy = new Gumshoe('.tablinks a', {
 				nested: true,
 				offset: 150,

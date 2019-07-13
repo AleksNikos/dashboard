@@ -16,6 +16,43 @@
 	<link rel="stylesheet" href="css/home-media.css">
 </head>
 <body>
+	<!-- Menu -->
+	<div class="topnav">
+		<div id="menu">
+			<a class="active" href="index.html">Home</a>
+			<a href="docs.html">Docs</a>
+			<a data-fancybox data-src="#login" href="javascript:;" class="login-btn">Login</a>
+		</div>
+	</div>
+	<a href="javascript:void(0);" class="menu main icon">
+		<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<defs>
+				<linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+					<stop stop-color="#6673B4" offset="0%"></stop>
+					<stop stop-color="#9EAEFF" offset="100%"></stop>
+				</linearGradient>
+				<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="pink">
+					<stop stop-color="#feb4b4" offset="0%"></stop>
+					<stop stop-color="#ff729a" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
+					<g id="Group-3" transform="translate(25.000000, 15.000000)">
+						<rect id="Rectangle" fill="#D0D8FF" x="0" y="13" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
+					</g>
+					<g id="Group-4" transform="translate(25.000000, 15.000000)">
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="13" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="6.5" width="15" height="2"></rect>
+						<rect id="Rectangle" fill="url(#pink)" x="0" y="0" width="15" height="2"></rect>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</a>
+	<!-- End menu -->
 	<div class="topbar-wrap">
 		<div class="wrapper">
 			<div class="row">
@@ -50,50 +87,12 @@
 			</div>
 		</div>
 	</div>
-	
-	<!-- Menu -->
-	<div class="topnav">
-		<div id="menu">
-			<a class="active" href="index.html">Home</a>
-			<a href="docs.html">Docs</a>
-			<a data-fancybox data-src="#login" href="javascript:;" class="login-btn">Login</a>
-		</div>
-	</div>
-	<a href="javascript:void(0);" class="menu icon">
-		<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		    <defs>
-		        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
-		            <stop stop-color="#6673B4" offset="0%"></stop>
-		            <stop stop-color="#9EAEFF" offset="100%"></stop>
-		        </linearGradient>
-				<linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="pink">
-					<stop stop-color="#feb4b4" offset="0%"></stop>
-					<stop stop-color="#ff729a" offset="100%"></stop>
-				</linearGradient>
-		    </defs>
-		    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-		        <g id="ic-menu-m" transform="translate(-25.000000, -15.000000)">
-		            <g id="Group-3" transform="translate(25.000000, 15.000000)">
-		                <rect id="Rectangle" fill="#D0D8FF" x="0" y="13" width="15" height="2"></rect>
-		                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="6.5" width="15" height="2"></rect>
-		                <rect id="Rectangle" fill="#D0D8FF" x="0" y="0" width="15" height="2"></rect>
-		            </g>
-					<g id="Group-4" transform="translate(25.000000, 15.000000)">
-						<rect id="Rectangle" fill="url(#pink)" x="0" y="13" width="15" height="2"></rect>
-						<rect id="Rectangle" fill="url(#pink)" x="0" y="6.5" width="15" height="2"></rect>
-						<rect id="Rectangle" fill="url(#pink)" x="0" y="0" width="15" height="2"></rect>
-					</g>
-		        </g>
-		    </g>
-		</svg>
-	</a>
-	<!-- End menu -->
 	<div id="fullpage">
 		<section id="home-first" class="home-first">
 			<div class="wrapper">
 				<div class="row">
 					<div class="home-chart">
-						<div class="lines-pulse"></div>
+						<div class="lines-pulse" style="left: 0;"></div>
 						<h1 class="title">
 							API to emotions <br />
 							and behavior <br />
@@ -172,7 +171,8 @@
 						<li>
 							<div class="num">3</div>
 							<div class="title">
-								Add key and API request to your service. That long:
+								Add key and API request to <br>
+								your service. That long:
 							</div>
 						</li>
 						<li class="code">
@@ -180,54 +180,61 @@
 							api_req_base = <span>'https://api.neurodatalab.com/'</span>
 						</li>
 					</ul>
-					
-					<ul class="blocks">
-						<li class="block">
-							<div class="icon">
-								<img src="img/ic-tri-cube.svg" alt="">
-							</div>
-							<div class="title">
-								Multimodal
-							</div>
-							<div class="desc">
-								Analyses facial expressions, voice, body pose and physiology
-							</div>
-						</li>
-						<li class="block">
-							<div class="icon">
-								<img src="img/ic-tri-guitar.svg" alt="">
-							</div>
-							<div class="title">
-								Real-time
-							</div>
-							<div class="desc">
-								All services can handle real-time data flow as fast as pre-recorded data
-							</div>
-						</li>
-						<li class="block">
-							<div class="icon">
-								<img src="img/ic-tri-people.svg" alt="">
-							</div>
-							<div class="title">
-								Multiperson
-							</div>
-							<div class="desc">
-								Get per-person data for up to 7 people present in the frame
-							</div>
-						</li>
-						<li class="block">
-							<div class="icon">
-								<img src="img/ic-tri-gem.svg" alt="">
-							</div>
-							<div class="title">
-								Precise
-							</div>
-							<div class="desc">
-								Works with natural data
-								‘in the wild’ thanks to the biggest affective data set
-							</div>
-						</li>
-					</ul>
+
+				</div>
+				<div class="row">
+					<div class="blocks">
+						<ul class="first-two">
+							<li class="block">
+								<div class="icon">
+									<img src="img/ic-tri-cube.svg" alt="">
+								</div>
+								<div class="title">
+									Multimodal
+								</div>
+								<div class="desc">
+									Analyses facial expressions, voice, body pose and physiology
+								</div>
+							</li>
+							<li class="block">
+								<div class="icon">
+									<img src="img/ic-tri-guitar.svg" alt="">
+								</div>
+								<div class="title">
+									Real-time
+								</div>
+								<div class="desc">
+									All services can handle real-time data flow as fast as pre-recorded data
+								</div>
+							</li>
+						</ul>
+						<ul class="second-two">
+							<li class="block">
+								<div class="icon">
+									<img src="img/ic-tri-people.svg" alt="">
+								</div>
+								<div class="title">
+									Multiperson
+								</div>
+								<div class="desc">
+									Get per-person data for up to 7 people present in the frame
+								</div>
+							</li>
+							<li class="block">
+								<div class="icon">
+									<img src="img/ic-tri-gem.svg" alt="">
+								</div>
+								<div class="title">
+									Precise
+								</div>
+								<div class="desc">
+									Works with natural data <br>
+									‘in the wild’ thanks to the biggest <br>
+									affective data set
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -278,6 +285,9 @@
 							Sign Up now
 						</a>
 					</div>
+					<div class="laptop">
+						<img src="img/laptop.png" alt="">
+					</div>
 				</div>
 				<div class="row">
 					<div class="footer">
@@ -291,14 +301,13 @@
 							</svg>
 							<span>© 11111100011</span>
 						</a>
-						
 						<div class="links">
 							<a href="https://neurodatalab.com" target='_blank' class="company_name">
 								Neurodata Lab © 11111100011
 							</a>
 							<a href="mailto:support@neurodatalab.dev">support@neurodatalab.dev</a>
 							<a href="faq.html">f.a.q.</a>
-							<a data-fancybox data-src="#success" href="javascript:;" class="success">terms</a>
+							<a data-fancybox data-src="#terms" href="javascript:;" class="success">terms</a>
 						</div>
 					</div>
 				</div>
@@ -367,7 +376,7 @@
 					<span>Email</span>
 					<input type="email" placeholder="E-mail">
 					<div class="info">
-						<span></span>
+						i
 						<div class="infobox_help">
 							Inputs has errors
 						</div>
@@ -377,20 +386,20 @@
 					<span>Password</span>
 					<input type="password" class="password" placeholder="Password">
 					<div class="info">
-						<span></span>
+						i
 						<div class="infobox_help">
 							At least 8 characters long including capital letters and numbers 0-9
 						</div>
 					</div>
 				</div>
 				<div class="inp-wr remember">
-					<label>I agree with <a href="terms.html">Terms</a>
+					<label>I agree with <a data-fancybox data-src="#terms" href="javascript:;" class="success">Terms</a>
 						<input type="checkbox">
 						<span class="checkmark"></span>
 					</label>
 				</div>
 				<div class="inp-wr btn">
-					<button class="login inactive">CREATE ACCOUNT</button>
+					<button type="submit" class="login inactive">CREATE ACCOUNT</button>
 				</div>
 			</form>
 		</div>
@@ -417,7 +426,7 @@
 			<p class="informer">
 				If you forgot your email, please, contact
 				<br />
-				<a href="#">support@neurodatalab.dev</a>
+				<a href="mailto:support@neurodatalab.dev">support@neurodatalab.dev</a>
 			</p>		
 		</div>
 	</div>
@@ -465,11 +474,11 @@
 				DEMO
 			</div>
 			<img class="full-image" src="img/e1-res-fd.jpg" alt="image">
-			<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+			<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)
 </code></pre>
-			<a class="see_docs" href="#">See documentation</a>
+			<a class="see_docs" href="docs.html">See documentation</a>
 			<pre class="code"><a class="file" href="files/e1-fd.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="violet">"h"</span>: <span class="green">278</span>,
@@ -497,10 +506,10 @@ result, status, error_message = face_detector.on_image(image)
 				DEMO
 			</div>
 			<img class="full-image" src="img/e2-res-fd.jpg" alt="image">
-			<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+			<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-<a class="see_docs" href="#">See documentation</a>
+<a class="see_docs" href="docs.html">See documentation</a>
 <pre class="code"><a class="file" href="files/e2-fd.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="violet">"h"</span>: <span class="green">278</span>, 
@@ -528,10 +537,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 				DEMO
 			</div>
 			<img class="full-image" src="img/e3-res-fd.jpg" alt="image">
-			<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+			<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-			<a class="see_docs" href="#">See documentation</a>
+			<a class="see_docs" href="docs.html">See documentation</a>
 			<pre class="code"><a class="file" href="files/e3-fd.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="violet">"h"</span>: <span class="green">278</span>, 
@@ -559,10 +568,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 				DEMO
 			</div>
 			<img class="full-image" src="img/e4-res-fd.jpg" alt="image">
-			<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+			<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-			<a class="see_docs" href="#">See documentation</a>
+			<a class="see_docs" href="docs.html">See documentation</a>
 			<pre class="code"><a class="file" href="files/e4-fd.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="violet">"h"</span>: <span class="green">278</span>, 
@@ -625,10 +634,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 					DEMO
 				</div>
 				<img class="full-image" src="img/e1-res-er.jpg" alt="image">
-				<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+				<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-				<a class="see_docs" href="#">See documentation</a>
+				<a class="see_docs" href="docs.html">See documentation</a>
 				<pre class="code"><a class="file" href="files/e1-er.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="green">"h"</span>: <span class="violet">278</span>,
@@ -674,10 +683,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 					DEMO
 				</div>
 				<img class="full-image" src="img/e2-res-er.jpg" alt="image">
-				<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+				<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-				<a class="see_docs" href="#">See documentation</a>
+				<a class="see_docs" href="docs.html">See documentation</a>
 				<pre class="code"><a class="file" href="files/e2-er.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="green">"h"</span>: <span class="violet">278</span>,
@@ -723,10 +732,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 					DEMO
 				</div>
 				<img class="full-image" src="img/e3-res-er.jpg" alt="image">
-				<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+				<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-				<a class="see_docs" href="#">See documentation</a>
+				<a class="see_docs" href="docs.html">See documentation</a>
 				<pre class="code"><a class="file" href="files/e3-er.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="green">"h"</span>: <span class="violet">278</span>,
@@ -772,10 +781,10 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 					DEMO
 				</div>
 				<img class="full-image" src="img/e4-res-er.jpg" alt="image">
-				<pre class="code"><a href="#">See documentation</a><code><span class="grey">#example code</span>
+				<pre class="code"><a href="docs.html">See documentation</a><code><span class="grey">#example code</span>
 image = Image.from_file(<span class="violet">'example1.jpg'</span>)
 result, status, error_message = face_detector.on_image(image)</code></pre>
-				<a class="see_docs" href="#">See documentation</a>
+				<a class="see_docs" href="docs.html">See documentation</a>
 				<pre class="code"><a class="file" href="files/e4-er.json" download><img src="img/json.svg" alt=""></a><code>[
   {
     <span class="green">"h"</span>: <span class="violet">278</span>,
@@ -813,7 +822,26 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 			</div>
 		</div>
 
-	<a data-fancybox data-src="#success" href="javascript:;" class="success">
+    <div id="terms" class="modal">
+        <a class="close-btn" onclick="$.fancybox.close();" href="javascript:;">
+            <img src="img/close.svg" alt="Close">
+        </a>
+        <h2>Terms</h2>
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+		<div class="buttons">
+			<div class="fill">
+				<button class="btn">
+					Cancel
+				</button>
+			</div>
+			<div class="unfill">
+				<button class="btn">Save</button>
+			</div>
+		</div>
+    </div>
+	<a data-fancybox data-src="#success" href="javascript:;" class="success"></a>
 	<!-- Success window popup	-->
 	<div id="success">
 		<a class="close-btn" onclick="$.fancybox.close();" href="javascript:;">
@@ -838,11 +866,21 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 			Please, check your inbox to verify the email address.
 		</p>
 	</div>
+	<a data-fancybox data-src="#removed" href="javascript:;"></a>
+	<div id="removed" class="modal">
+		<a class="close-btn" onclick="$.fancybox.close();" href="javascript:;">
+			<img src="img/close.svg" alt="Close">
+		</a>
+		<h2>
+			The user has been successfully removed
+		</h2>
+	</div>
 	<!-- Resources -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.extensions.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/home.js"></script>
     <script>
@@ -904,7 +942,6 @@ result, status, error_message = face_detector.on_image(image)</code></pre>
 				$('.lines-pulse').css("min-width","300px");
 			}
 		}
-
 	</script>
 </body>
 </html>
