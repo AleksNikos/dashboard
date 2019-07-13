@@ -1,0 +1,8 @@
+{
+  "name": "landscape screen",
+  "short_name": "landscape",
+  "lang": "en_US",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape-primary"
+}

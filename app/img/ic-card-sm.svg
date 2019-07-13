@@ -1,0 +1,13 @@
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#6673B4" offset="0%"></stop>
+            <stop stop-color="#9EAEFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-card-sm" fill="url(#linearGradient-1)">
+            <path d="M1.575,6.75 L19.425,6.75 L19.425,5 C19.425,4.72385763 19.1899495,4.5 18.9,4.5 L2.1,4.5 C1.81005051,4.5 1.575,4.72385763 1.575,5 L1.575,6.75 Z M1.575,8.75 L1.575,16 C1.575,16.2761424 1.81005051,16.5 2.1,16.5 L18.9,16.5 C19.1899495,16.5 19.425,16.2761424 19.425,16 L19.425,8.75 L1.575,8.75 Z M2.1,3 L18.9,3 C20.059798,3 21,3.8954305 21,5 L21,16 C21,17.1045695 20.059798,18 18.9,18 L2.1,18 C0.940202025,18 1.42034288e-16,17.1045695 0,16 L0,5 C-1.42034288e-16,3.8954305 0.940202025,3 2.1,3 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

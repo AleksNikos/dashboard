@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="805px" height="46px" viewBox="0 0 805 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>0E6D1F43-B36C-4AF6-9FD9-6A0EC8175F11</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tab-menu-item-active-m" transform="translate(357.000000, 1.000000)">
+            <g id="Group" transform="translate(-357.000000, -1.000000)">
+                <path d="M361.000114,1 L443.002676,1 C445.211815,1 447.002676,2.790861 447.002676,5 L447.002676,42 L447.002676,42.0026757 C447.002676,44.2103369 448.792339,46 451,46 L353,46 L353.000114,46 C355.209253,46 357.000114,44.209139 357.000114,42 L357.000114,5 C357.000114,2.790861 358.790975,1 361.000114,1 Z" id="active" fill-opacity="0.3" fill="#1E2549"></path>
+                <path d="M0,1 L361,1 L361,1 C358.826978,1 357.065395,2.76158262 357.065395,4.9346049 L357.065395,42 C357.065395,44.209139 355.274534,46 353.065395,46 L0,46 L0,1 Z" id="inactive-before" fill-opacity="0.5" fill="#1E2549"></path>
+                <path d="M443,1 L805,1 L805,1 C803.020524,1 801.415842,2.60468238 801.415842,4.58415842 L801.415842,42 C801.415842,44.209139 799.624981,46 797.415842,46 L443,46 L443,1 Z" id="inactive-after" fill-opacity="0.5" fill="#1E2549" transform="translate(624.000000, 23.500000) scale(-1, 1) translate(-624.000000, -23.500000) "></path>
+                <path d="M5.68434189e-14,45.5 L353.475037,45.5 C355.684176,45.5 357.475037,43.709139 357.475037,41.5 L357.475037,4.5 C357.475037,2.290861 359.265898,0.5 361.475037,0.5 L442.468925,0.5 C444.678064,0.5 446.468925,2.290861 446.468925,4.5 L446.468925,41.5 C446.468925,43.709139 448.259786,45.5 450.468925,45.5 L805,45.5" id="tab-border" stroke="#6673B4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

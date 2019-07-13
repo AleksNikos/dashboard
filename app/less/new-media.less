@@ -1,0 +1,196 @@
+@media screen and (max-width: 1280px){
+  div.dashboard, div.users, div.keys, div.payments, div.settings {
+    .right-bar .block-wrapper{
+      &:nth-child(2){
+        height: 209px;
+      }
+      .review{
+        margin-left: 23px;
+      }
+      .chart-container{
+        width: 130px;
+        height: 130px;
+        #doughnutСhartcanvas{
+          transform: scale(0.72, 0.72);
+        }
+        .val{
+          width: 130px;
+          top: 30px;
+        }
+        .desc{
+          top: 70px;
+          width: 130px;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px){
+  div.dashboard, div.users, div.keys, div.payments, div.settings {
+    .right-bar .block-wrapper:nth-child(2){
+      height: auto;
+    }
+  }
+  div.keys-info .main-info .table_info .key_name a,
+  div.users-info .main-info .table_info .user_name a{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width: 560px){
+  div.keys-info .main-info .table_info .key_title{
+    display: none;
+  }
+  div.keys-info .main-info .table_info .fd,
+  div.keys-info .main-info .table_info .er{
+    img{
+      display: none;
+    }
+    span{
+      display: inline-block;
+    }
+  }
+
+  .payments .payments-info .main-info .table-title .tabs{
+    order:3;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px){
+  div.dashboard-info, div.users-info, div.keys-info, div.payments-info , div.settings-info{
+    .dashboard_left-bar .mobile-nav ul li a{
+      padding: 15px 20px;
+    }
+  }
+  #full-width-mobile-chart .tabs-chart {
+    display: block;
+    width: 100%;
+  }
+  #full-width-mobile-chart .title{
+    margin-bottom: 15px;
+  }
+}
+
+
+
+@media screen and (max-width: 420px){
+  #add-key,
+  #add-user,
+  #modal-user,
+  #edit-paymant,
+  #add-payment{
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    min-width: unset;
+    overflow: hidden;
+    .checkboxes .fd, .checkboxes .er{
+      width: 100%;
+      margin: 10px 0;
+    }
+    button{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
+      &.remove{
+        border-radius: 0;
+      }
+      &.create{
+        border-radius: 0;
+      }
+      &.add-user{
+        border-radius: 0;
+      }
+    }
+  }
+  #approve-user{
+    .buttons{
+      .cancel{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .remove{
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px){
+  div.dashboard-info,
+  div.users-info,
+  div.keys-info,
+  div.payments-info,
+  div.settings-info{
+    .dashboard_left-bar .mobile-nav ul li{
+      &:last-child{
+        padding: 0;
+      }
+      a{
+        padding: 9px 25px;
+      }
+    }
+  }
+  div.dashboard-info,
+  div.users-info,
+  div.keys-info,
+  div.payments-info,
+  div.settings-info{
+    .main-info{
+      margin-top: 46px;
+    }
+
+  }
+  div.dashboard-info,
+  div.users-info,
+  div.keys-info,
+  div.payments-info,
+  div.settings-info{
+    .dashboard_left-bar .mobile-nav.active{
+      &:before{
+        height: 56px;
+      }
+      ul li a{
+        padding: 8.8px 21.5px;
+      }
+    }
+  }
+  #edit-paymant,
+  #add-payment {
+    .checkboxes {
+      flex-direction: column;
+      .card, .paypal{
+        width: 100%;
+        .soon{
+          bottom: 10px;
+          left: unset;
+        }
+      }
+    }
+    .add-payment-form{
+      .checkboxes{
+        .card,.paypal{
+          width: 100%;
+        }
+        .paypal{
+          margin-left: 0;
+          .soon{
+            bottom: 10px;
+            left: unset;
+          }
+        }
+      }
+      .card-detail{
+        .card-date,
+        .card-cvc{
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+// Developed by nikoaldr@gmail.com (2019)
